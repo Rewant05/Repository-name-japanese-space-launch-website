@@ -1,0 +1,7 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Link } from 'react-router-dom';
+import { siteData } from '../config/siteData';
+import { Brand } from './Navbar';
+export function Footer() {
+    return _jsxs("footer", { className: "footer", children: [_jsxs("div", { className: "footer-signal", children: [_jsx("span", { children: "MISSION SUPPORT CHANNEL" }), _jsx("i", {}), _jsx("b", { children: "ONLINE" })] }), _jsxs("div", { className: "footer-main", children: [_jsxs("div", { className: "footer-brand", children: [_jsx(Brand, {}), _jsx("p", { children: siteData.company.tagline })] }), _jsxs("div", { className: "footer-nav", children: [_jsx("p", { className: "eyebrow", children: "SITEMAP" }), siteData.navigation.map(function (x) { return _jsx(Link, { to: x.href, children: x.label }, x.href); })] }), _jsxs("div", { className: "footer-contact", children: [_jsx("p", { className: "eyebrow", children: "CONTACT" }), _jsx("a", { href: "mailto:".concat(siteData.company.email), children: siteData.company.email }), _jsx("a", { href: "tel:".concat(siteData.company.phone.replace(/-/g, '')), children: siteData.company.phone }), _jsx("span", { children: siteData.company.hours })] })] }), _jsxs("div", { className: "footer-bottom", children: [_jsxs("span", { children: ["\u00A9 ", new Date().getFullYear(), " ", siteData.company.romanized] }), _jsx("div", { children: siteData.footerLinks.map(function (x) { return _jsx(Link, { to: x.href, children: x.label }, x.href); }) }), _jsx("span", { children: "35.617\u00B0N / 139.780\u00B0E" })] })] });
+}
