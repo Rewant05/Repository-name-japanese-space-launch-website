@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { siteData } from '../config/siteData'
 
-export function Brand() {
+type BrandProps = {
+  subLabel?: string
+}
+
+export function Brand({ subLabel = siteData.company.romanized }: BrandProps) {
   return <Link to="/" className="brand" aria-label={`${siteData.company.name} ホーム`}>
     <span className="brand-mark" aria-hidden="true"><i /><i /></span>
-    <span><b>{siteData.company.name}</b><small>{siteData.company.romanized}</small></span>
+    <span><b>{siteData.company.name}</b><small>{subLabel}</small></span>
   </Link>
 }
 

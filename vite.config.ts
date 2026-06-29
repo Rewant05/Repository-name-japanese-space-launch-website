@@ -17,6 +17,9 @@ const prerenderHomepage = {
 
 export default defineConfig({
   plugins: [react(), prerenderHomepage],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
+  },
   build: {
     target: 'es2022',
     modulePreload: { polyfill: false },
